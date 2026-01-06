@@ -41,7 +41,7 @@ const App = () => {
     <div className="min-h-screen bg-mint-50">
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-full mx-auto px-3 sm:px-4 pt-2.5 sm:pt-4 pb-1 sm:pb-1.5">
-          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Brooklyn Baby and Me Events</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Brooklyn Baby and Me Activities</h1>
           <p className="text-xs sm:text-sm text-gray-600 mt-0.5 sm:mt-1">{events.length} events</p>
         </div>
       </header>

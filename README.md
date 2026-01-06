@@ -1,16 +1,12 @@
-# Event Calendar
+# Brooklyn Baby and Me Activities
 
-A single-page React application that displays events in a weekly calendar view. Events are grouped by day of the week and displayed vertically with overlapping events shown side-by-side.
+A single-page React application that displays Baby and Me events in Brooklyn. Events are grouped by day of the week and displayed vertically to help parents plan weekly activities.
 
 ## Features
 
-- Weekly calendar view with all 7 days (Monday-Sunday)
-- Events grouped by weekday
-- Overlapping events displayed side-by-side in columns
-- Time range automatically calculated (1 hour before earliest event to 1 hour after latest event)
+- View & filter Baby and Me activities
 - Click on any event to see full details
 - Mobile-responsive design with horizontal scrolling
-- Beautiful mint color theme
 
 ## Setup
 
@@ -66,7 +62,7 @@ Events are loaded from `frontend/public/events.json`. The application expects ev
 ## Project Structure
 
 ```
-events-cal/
+brooklyn-babies-events/
 ├── frontend/
 │   ├── public/
 │   │   └── events.json      # Event data
@@ -98,6 +94,3 @@ events-cal/
 
 The application uses Tailwind CSS with a custom mint color theme. The design is fully responsive and works on mobile, tablet, and desktop devices.
 
-## License
-
-ISC

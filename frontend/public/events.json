@@ -299,12 +299,12 @@
       "recurring": "weekly"
     },
     {
-      "title": "Alamo for All (Citypoint) (movie times vary)",
+      "title": "Alamo for All (Citypoint)",
       "location": "Alamo Drafthouse",
       "neighborhood": "Downtown BK",
       "start time": "11:00 AM",
       "end time": "2:00 PM",
-      "description": "The first showings of each film on Tuesdays follow Alamo for All rules. One movie ticket per adult.",
+      "description": "The first showings of each film on Tuesdays follow Alamo for All rules. One movie ticket per adult. Movie times may vary.",
       "activity-type": "Movies",
       "age-range": "Parents and babies under 1",
       "price": "One movie ticket per adult",
