@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Calendar from './components/Calendar';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
-import './App.css';
 
 const App = () => {
   const [events, setEvents] = useState([]);
