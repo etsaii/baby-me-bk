@@ -58,26 +58,47 @@ const Filters = ({ filters = {}, onFilterChange, neighborhoods = [], neighborhoo
   };
 
   const getFilterSummary = () => {
+    const totalFilters = selectedActivity.length + selectedPriceType.length + selectedNeighborhood.length;
     const parts = [];
     
-    if (selectedActivity.length > 0) {
-      if (selectedActivity.length === 1) {
-        parts.push(`${getActivityEmoji(selectedActivity[0])} ${selectedActivity[0]}`);
-      } else {
-        parts.push(`${selectedActivity.length} activities`);
+    // If 3 or fewer filters, list them all
+    if (totalFilters <= 3) {
+      // List all activity types
+      selectedActivity.forEach(type => {
+        parts.push(`${getActivityEmoji(type)} ${type}`);
+      });
+      
+      // List all price types
+      selectedPriceType.forEach(p => {
+        const priceLabel = p.charAt(0).toUpperCase() + p.slice(1);
+        parts.push(priceLabel);
+      });
+      
+      // List all neighborhoods
+      selectedNeighborhood.forEach(neighborhood => {
+        parts.push(neighborhood);
+      });
+    } else {
+      // Use abbreviated format when more than 3 filters
+      if (selectedActivity.length > 0) {
+        if (selectedActivity.length === 1) {
+          parts.push(`${getActivityEmoji(selectedActivity[0])} ${selectedActivity[0]}`);
+        } else {
+          parts.push(`${selectedActivity.length} activities`);
+        }
       }
-    }
-    
-    if (selectedPriceType.length > 0) {
-      const priceLabels = selectedPriceType.map(p => p.charAt(0).toUpperCase() + p.slice(1));
-      parts.push(priceLabels.join(', '));
-    }
-    
-    if (selectedNeighborhood.length > 0) {
-      if (selectedNeighborhood.length === 1) {
-        parts.push(selectedNeighborhood[0]);
-      } else {
-        parts.push(`${selectedNeighborhood.length} neighborhoods`);
+      
+      if (selectedPriceType.length > 0) {
+        const priceLabels = selectedPriceType.map(p => p.charAt(0).toUpperCase() + p.slice(1));
+        parts.push(priceLabels.join(', '));
+      }
+      
+      if (selectedNeighborhood.length > 0) {
+        if (selectedNeighborhood.length === 1) {
+          parts.push(selectedNeighborhood[0]);
+        } else {
+          parts.push(`${selectedNeighborhood.length} neighborhoods`);
+        }
       }
     }
     
