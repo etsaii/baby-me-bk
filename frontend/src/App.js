@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Calendar from './components/Calendar';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
@@ -47,6 +48,7 @@ const App = () => {
       <main className="h-[calc(100vh-70px)] sm:h-[calc(100vh-80px)] md:h-[calc(100vh-100px)]">
         <Calendar events={events} />
       </main>
+      <Analytics />
     </div>
   );
 };
